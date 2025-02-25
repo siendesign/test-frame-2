@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: 'Farcaster Frames v2 Demo',
-  description: 'A Farcaster Frames v2 demo app',
-};
+// export const metadata: Metadata = {
+//   title: 'Farcaster Frames v2 Demo',
+//   description: 'A Farcaster Frames v2 demo app',
+// };
 
 
 const appUrl = "https://farcaster-frames-test-tan.vercel.app";
