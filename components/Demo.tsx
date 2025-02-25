@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useState } from "react";
+// @ts-ignore
 import sdk, { type FrameContext } from "@farcaster/frame-sdk";
 import Image from "next/image";
 import { Button } from "./ui/button";
