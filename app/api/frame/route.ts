@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       <meta property="fc:frame" content="vNext" />
       <meta property="fc:frame:image" content="${NEXT_PUBLIC_URL}/hi.png" />
       <meta property="fc:frame:button:1" content="Connect Wallet" />
-      <meta property="fc:frame:redirect" content="${NEXT_PUBLIC_URL}/connect" />
+      <meta property="fc:frame:redirect" content="${NEXT_PUBLIC_URL}" />
     </head></html>`,
     {
       headers: {
