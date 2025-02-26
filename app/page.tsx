@@ -34,7 +34,7 @@ const appUrl = "https://farcaster-frames-test-tan.vercel.app";
 //       "fc:frame": JSON.stringify(frame)
 //     }
 //   };
-}
+// }
 
 export default function Home() {
   return (
