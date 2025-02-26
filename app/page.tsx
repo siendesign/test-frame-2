@@ -1,11 +1,8 @@
-'use client';
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
 import { NEXT_PUBLIC_URL } from "./config";
+import Demo from "@/components/Demo";
 
-const Demo = dynamic(() => import("@/components/Demo"), {
-  ssr: false,
-});
 
 const appUrl = "https://farcaster-frames-test-tan.vercel.app";
 
