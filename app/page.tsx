@@ -1,6 +1,7 @@
 'use client';
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
+import { NEXT_PUBLIC_URL } from "./config";
 
 const Demo = dynamic(() => import("@/components/Demo"), {
   ssr: false,
@@ -8,33 +9,27 @@ const Demo = dynamic(() => import("@/components/Demo"), {
 
 const appUrl = "https://farcaster-frames-test-tan.vercel.app";
 
-// const frame = {
-//   version: "next",
-//   imageUrl: `${appUrl}/image.png`,
-//   button: {
-//     title: "Lunch Frame",
-//     action: {
-//       type: "lunch_frame",
-//       name: "farcaster test app",
-//       url: appUrl,
-//       splashImageUrl: `${appUrl}/image.png`,
-//       splashBackgroundColor: "#000",
-//     },
-//   },
-// };
+const frameMetadata = {
+  'fc:frame': 'vNext',
+  'fc:frame:image': `${NEXT_PUBLIC_URL}/hi.png`,
+  'fc:frame:image:aspect_ratio': '1:1',
+  'fc:frame:button:1': 'Connect Wallet',
+  'fc:frame:post_url': `${NEXT_PUBLIC_URL}/api/frame`,
+};
 
-// export async function generateMetadata(): Promise<Metadata> {
-//   return {
-//     title:"test farcaster frame",
-//     openGraph:{
-//       title:"test farcaster frame",
-//       description:"test of farcaster frames"
-//     },
-//     other:{
-//       "fc:frame": JSON.stringify(frame)
-//     }
-//   };
-// }
+export const metadata: Metadata = {
+  metadataBase: new URL(NEXT_PUBLIC_URL),
+  title: 'My Farcaster Frame',
+  description: 'A simple Farcaster Frame',
+  openGraph: {
+    title: 'My Farcaster Frame',
+    description: 'A simple Farcaster Frame',
+    images: [`${NEXT_PUBLIC_URL}/hi.png`],
+  },
+  other: {
+    ...frameMetadata,
+  },
+};
 
 export default function Home() {
   return (
