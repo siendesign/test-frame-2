@@ -11,7 +11,7 @@ const frameMetadata = {
   'fc:frame:image': `${NEXT_PUBLIC_URL}/hi.png`,
   'fc:frame:image:aspect_ratio': '1:1',
   'fc:frame:button:1': 'Connect Wallet',
-  'fc:frame:post_url': `${NEXT_PUBLIC_URL}/api/frame`,
+  'fc:frame:post_url': `${NEXT_PUBLIC_URL}`,
 };
 
 export const metadata: Metadata = {
