@@ -7,7 +7,7 @@ import Demo from "@/components/Demo";
 const appUrl = "https://farcaster-frames-test-tan.vercel.app";
 
 const frameMetadata = {
-  'fc:frame': 'vNext',
+  'fc:frame': '<stringified FrameEmbed JSON>',
   'fc:frame:image': `${NEXT_PUBLIC_URL}/hi.png`,
   'fc:frame:image:aspect_ratio': '1:1',
   'fc:frame:button:1': 'Connect Wallet',
