@@ -42,20 +42,20 @@ const frame = {
   },
 };
 
-export const validate = 300
+const validate = 300;
+// export const validate = 300;
 
-export async function generateMetadata(): Promise <Metadata> {
-  return{
+export async function generateMetadata(): Promise<Metadata> {
+  return {
     title: "frames demo",
     openGraph: {
       title: "frames demo",
       description: "A simple frames demo by essien",
-
     },
-    other:{
-      "fc:frame": JSON.stringify(frame)
-    }
-  }
+    other: {
+      "fc:frame": JSON.stringify(frame),
+    },
+  };
 }
 
 export default function Home() {
