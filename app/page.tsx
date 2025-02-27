@@ -29,14 +29,14 @@ import Demo from "@/components/Demo";
 
 const frame = {
   version: "next",
-  imageUrl: `${NEXT_PUBLIC_URL}/hi.png`,
+  imageUrl: `${NEXT_PUBLIC_URL}/splash.png`,
   button: {
     title: "Launch frame",
     action: {
       type: "launch_frame",
       name: "test frame ",
       url: NEXT_PUBLIC_URL,
-      splashImageUrl: `${NEXT_PUBLIC_URL}/image.png`,
+      splashImageUrl: `${NEXT_PUBLIC_URL}/icon.png`,
       splashBackgroundColor: "#000000",
     },
   },

@@ -15,8 +15,8 @@ export async function GET() {
     frame: {
       version: "0.0.0",
       name: "Simple frames Demo",
-      iconUrl: `${appUrl}/image.png`,
-      splashImageUrl: `${appUrl}/hi.png`,
+      iconUrl: `${appUrl}/icon.png`,
+      splashImageUrl: `${appUrl}/splash.png`,
       splashBackgroundColor: "#000000",
       homeUrl: appUrl,
     },
