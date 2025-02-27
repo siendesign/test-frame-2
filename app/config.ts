@@ -1,1 +1,1 @@
-export const NEXT_PUBLIC_URL = 'https://farcaster-frames-test-tan.vercel.app.';
+export const NEXT_PUBLIC_URL = 'https://farcaster-frames-test-tan.vercel.app';
