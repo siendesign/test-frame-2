@@ -7,7 +7,7 @@ import Demo from "@/components/Demo";
 
 // const frameMetadata = {
 //   'fc:frame': 'vNext',
-//   'fc:frame:image': `${NEXT_PUBLIC_URL}/hi.png`,
+//   'fc:frame:image': `${NEXT_PUBLIC_URL}/image.png`,
 //   'fc:frame:image:aspect_ratio': '3:2',
 //   // 'fc:frame:button:1': 'Connect Wallet',
 //   'fc:frame:post_url': `${NEXT_PUBLIC_URL}`,
@@ -20,7 +20,7 @@ import Demo from "@/components/Demo";
 //   openGraph: {
 //     title: 'My Farcaster Frame',
 //     description: 'A simple Farcaster Frame',
-//     images: [`${NEXT_PUBLIC_URL}/hi.png`],
+//     images: [`${NEXT_PUBLIC_URL}/splash.png`],
 //   },
 //   other: {
 //     ...frameMetadata,
@@ -29,21 +29,22 @@ import Demo from "@/components/Demo";
 
 const frame = {
   version: "next",
-  imageUrl: `${NEXT_PUBLIC_URL}/splash.png`,
+  imageUrl: `${NEXT_PUBLIC_URL}/image.png`,
   button: {
-    title: "Launch frame",
+    title: "Start App",
     action: {
       type: "launch_frame",
-      name: "test frame ",
+      name: "Sien frame ",
       url: NEXT_PUBLIC_URL,
-      splashImageUrl: `${NEXT_PUBLIC_URL}/icon.png`,
+      iconImagUrl: `${NEXT_PUBLIC_URL}/image.png`,
+      splashImageUrl: `https://42fd-2c0f-f5c0-480-1a4e-35ea-3a49-a926-85c7.ngrok-free.app/splash.png`,
       splashBackgroundColor: "#000000",
     },
   },
 };
 
-const validate = 300;
-// export const validate = 300;
+// const validate = 300;
+export const validate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
