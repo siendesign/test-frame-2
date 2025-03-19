@@ -49,18 +49,18 @@ const frameMetadata = {
 export const revalidate = false | 0 | number
 
 
-// export async function generateMetadata(): Promise<Metadata> {
-//   return {
-//     title: "frames demo",
-//     openGraph: {
-//       title: "frames demo",
-//       description: "A simple frames demo by essien",
-//     },
-//     other: {
-//       "fc:frame": JSON.stringify(frame),
-//     },
-//   };
-// }
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "frames demo",
+    openGraph: {
+      title: "frames demo",
+      description: "A simple frames demo by essien",
+    },
+    other: {
+      "fc:frame": JSON.stringify(frameMetadata),
+    },
+  };
+}
 
 export default function Home() {
   return (
