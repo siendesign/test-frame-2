@@ -5,13 +5,13 @@ import Demo from "@/components/Demo";
 
 // const appUrl = "https://farcaster-frames-test-tan.vercel.app";
 
-// const frameMetadata = {
-//   'fc:frame': 'vNext',
-//   'fc:frame:image': `${NEXT_PUBLIC_URL}/image.png`,
-//   'fc:frame:image:aspect_ratio': '3:2',
-//   // 'fc:frame:button:1': 'Connect Wallet',
-//   'fc:frame:post_url': `${NEXT_PUBLIC_URL}`,
-// };
+const frameMetadata = {
+  'fc:frame': 'vNext',
+  'fc:frame:image': `${NEXT_PUBLIC_URL}/image.png`,
+  'fc:frame:image:aspect_ratio': '3:2',
+  // 'fc:frame:button:1': 'Connect Wallet',
+  'fc:frame:post_url': `${NEXT_PUBLIC_URL}`,
+};
 
 // export const metadata: Metadata = {
 //   metadataBase: new URL(NEXT_PUBLIC_URL),
@@ -27,37 +27,40 @@ import Demo from "@/components/Demo";
 //   },
 // };
 
-const frame = {
-  version: "next",
-  imageUrl: `${NEXT_PUBLIC_URL}/image.png`,
-  button: {
-    title: "Start App",
-    action: {
-      type: "launch_frame",
-      name: "Sien frame ",
-      url: NEXT_PUBLIC_URL,
-      iconImagUrl: `${NEXT_PUBLIC_URL}/image.png`,
-      splashImageUrl: `https://42fd-2c0f-f5c0-480-1a4e-35ea-3a49-a926-85c7.ngrok-free.app/splash.png`,
-      splashBackgroundColor: "#000000",
-    },
-  },
-};
+// const frame = {
+//   version: "next",
+//   imageUrl: `${NEXT_PUBLIC_URL}/image.png`,
+//   button: {
+//     title: "Start App",
+//     action: {
+//       type: "launch_frame",
+//       name: "Sien frame ",
+//       url: NEXT_PUBLIC_URL,
+//       iconImagUrl: `${NEXT_PUBLIC_URL}/image.png`,
+//       splashImageUrl: `https://cf74-102-88-111-53.ngrok-free.app/splash.png`,
+//       splashBackgroundColor: "#000000",
+//     },
+//   },
+// };
 
 // const validate = 300;
-export const validate = 300;
+// @ts-ignore
+// export const validate = 300;
+export const revalidate = false | 0 | number
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "frames demo",
-    openGraph: {
-      title: "frames demo",
-      description: "A simple frames demo by essien",
-    },
-    other: {
-      "fc:frame": JSON.stringify(frame),
-    },
-  };
-}
+
+// export async function generateMetadata(): Promise<Metadata> {
+//   return {
+//     title: "frames demo",
+//     openGraph: {
+//       title: "frames demo",
+//       description: "A simple frames demo by essien",
+//     },
+//     other: {
+//       "fc:frame": JSON.stringify(frame),
+//     },
+//   };
+// }
 
 export default function Home() {
   return (
